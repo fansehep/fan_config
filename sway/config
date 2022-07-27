@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term terminator
+set $term alacritty -e tmux
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -22,7 +22,7 @@ set $menu rofi -show run -theme solarized -show-icons
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Downloads/chrome/windowspng.png   fill
+output * bg ~/Wallpaper/black_light.png fill
 
 font pango:SourceCodePro Mudium 11
 #
@@ -67,9 +67,9 @@ bindswitch --reload --locked lid:off output $laptop enable
 
 for_window [app_id="nautilus"] border none
 
-bindsym XF86AudioRaiseVolume        exec pactl set-sink-volume @DEFAULT_SINK@ +5% && pamixer --get-volume > $XDG_RUNTIME_DIR/wobpipe
-bindsym XF86AudioLowerVolume        exec pactl set-sink-volume @DEFAULT_SINK@ -5% && pamixer --get-volume > $XDG_RUNTIME_DIR/wobpipe
-bindsym $mod+Shift+m exec swaylock -f
+bindsym XF86AudioRaiseVolume        exec pactl set-sink-volume @DEFAULT_SINK@ +1% && pamixer --get-volume > $XDG_RUNTIME_DIR/wobpipe
+bindsym XF86AudioLowerVolume        exec pactl set-sink-volume @DEFAULT_SINK@ -1% && pamixer --get-volume > $XDG_RUNTIME_DIR/wobpipe
+bindsym $mod+Shift+m exec swaylock -f -i '~/Wallpaper/yello_night.png' -u
 ### Key bindings
 #
 # Basics:
@@ -227,11 +227,12 @@ default_floating_border pixel
 # the message to me
 exec mako
 # sometimes i need to use chinese
+exec_always fcitx5 -d --replace
 exec fcitx5
-
 # temparature protuct eyes
-exec wlsunset -t 5000
-
+exec wlsunset -T 4900 &
+exec timedatectl set-local-rtc true
+exec wmaname LG3D
 #include /etc/sway/config.d/*
 
 # myBrightness setting need the light-git
@@ -244,4 +245,3 @@ bindsym Shift+XF86AudioRaiseVolume  exec pactl set-sink-volume @DEFAULT_SINK@ +1
 bindsym Shift+XF86AudioLowerVolume  exec pactl set-sink-volume @DEFAULT_SINK@ -1% && pamixer --get-volume > $XDG_RUNTIME_DIR/wobpipe
 bindsym print exec grim -t jpeg -g "$(slurp)" ~/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-
