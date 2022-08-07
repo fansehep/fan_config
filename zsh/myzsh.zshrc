@@ -146,8 +146,10 @@ alias ps="/bin/procs"
 alias df="/bin/duf"
 alias du="/bin/dust"
 alias curl="/bin/http"
+alias br="/bin/broot"
 
 
 
 
-
+export LANGUAGE=en_US.UTF-8
+source /home/fan/.config/broot/launcher/bash/br
