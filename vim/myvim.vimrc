@@ -1,4 +1,4 @@
-
+syntax on
 set nocompatible
 syntax enable
 
@@ -18,9 +18,12 @@ set tabstop=2
 set expandtab
 
 set showmatch
-
+" 高亮当前行
+" set cursorline
 set hlsearch
 
+" 高亮光标所在行
+" highlight Cursor
 set ignorecase
 
 set noswapfile
@@ -75,6 +78,10 @@ Plug 'scrooloose/nerdcommenter'
 " 好用的补全插件
 Plug 'valloric/youcompleteme'
 
+" nerd git 插件
+Plug 'xuyuanp/nerdtree-git-plugin'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 
 call plug#end()
@@ -119,27 +126,27 @@ inoremap { {<CR>}<ESC>0
 let g:rainbow_active=1
 
 let g:rainbow_conf = {
-      \	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-      \	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
-      \	'operators': '_,_',
-      \	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-      \	'separately': {
-      \		'*': {},
-      \		'tex': {
-      \			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-      \		},
-      \		'lisp': {
-      \			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-      \		},
-      \		'vim': {
-      \			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-      \		},
-      \		'html': {
-      \			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
-      \		},
-      \		'css': 0,
-      \	}
-      \}
+                  \	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+                  \	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+                  \	'operators': '_,_',
+                  \	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+                  \	'separately': {
+                  \		'*': {},
+                  \		'tex': {
+                  \			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+                  \		},
+                  \		'lisp': {
+                  \			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+                  \		},
+                  \		'vim': {
+                  \			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+                  \		},
+                  \		'html': {
+                  \			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+                  \		},
+                  \		'css': 0,
+                  \	}
+                  \}
 
 " autocmd vimenter * NERDTree
 
@@ -147,7 +154,7 @@ let g:airline_powerline_fonts = 1
 
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-let g:NERDTreeWinSize = 25
+let g:NERDTreeWinSize = 29
 
 " nerdtree windows size
 let g:NERDTreeWinSize=40
@@ -172,3 +179,56 @@ let mapleader=","
 
 
 filetype plugin on
+
+let g:webdevicons_enable_nerdtree = 1
+
+
+
+:set showtabline=2
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#show_buffers=0
+
+let g:airline_powerline_fonts = 1
+let g:airline_section_b = '%{getcwd()}'
+
+let g:airline#extensions#tabline#enabled = 1                                                                      
+let g:airline#extensions#tabline#show_close_button = 0                                             
+let g:airline#extensions#tabline#tabs_label = ''       
+let g:airline#extensions#tabline#buffers_label = ''          
+let g:airline#extensions#tabline#fnamemod = ':t'                                                           
+let g:airline#extensions#tabline#show_tab_count = 0                                                               
+let g:airline#extensions#tabline#show_buffers = 0                                                       
+let g:airline#extensions#tabline#tab_min_count = 2                                       
+let g:airline#extensions#tabline#show_splits = 0                      
+let g:airline#extensions#tabline#show_tab_nr = 0                                                                     
+let g:airline#extensions#tabline#show_tab_type = 0
+
+
+
+" vim tabline config 舒服
+" shift + <- or -> 快速左右跳转
+map <S-Left> :tabp<CR>
+map <S-Right> :tabn<CR>
+" 开启 zsh support
+set wildmenu
+set wildmode=full
+
+" 自动关闭 nerdtree windows
+let g:nerdtree_tabs_autoclose=1
+" let g:nerdtree_tabs_open_on_console_startup=1
+" nerdtree-git 插件
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                  \ 'Modified'  :'✹',
+                  \ 'Staged'    :'✚',
+                  \ 'Untracked' :'✭',
+                  \ 'Renamed'   :'➜',
+                  \ 'Unmerged'  :'═',
+                  \ 'Deleted'   :'✖',
+                  \ 'Dirty'     :'✗',
+                  \ 'Ignored'   :'☒',
+                  \ 'Clean'     :'✔︎',
+                  \ 'Unknown'   :'?',
+                  \ }
+let g:NERDTreeGitStatusUseNerdFonts = 1
+let g:NERDTreeGitStatusShowIgnored = 1
+
