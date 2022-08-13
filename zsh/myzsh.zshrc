@@ -147,7 +147,7 @@ alias df="/bin/duf"
 alias du="/bin/dust"
 alias curl="/bin/http"
 alias br="/bin/broot"
-
+alias cd="__zoxide_z"
 export LANGUAGE=en_US.UTF-8
 
 
@@ -157,4 +157,7 @@ export GTK_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export XIM_SERVERS=fcitx
 WAYLAND_DISPLAY=alacritty
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 
+# i don't like the tmux bar
+# exec tmux set-option status off

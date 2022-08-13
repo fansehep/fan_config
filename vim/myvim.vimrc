@@ -82,7 +82,12 @@ Plug 'valloric/youcompleteme'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
+" markdown 预览插件
+" 迅速预览, 在浏览器中打开一个预览
+" 只有打开一个*.md 才会启用
+" 好用的插件！必须安装 node.js 
+" sudo apm -g install instant-markdown-d
+Plug 'suan/vim-instant-markdown'
 
 call plug#end()
 
@@ -258,3 +263,9 @@ command! -n=? -complete=file -bar Edit :call <SID>OpenFileOrExplorer('<args>')
 
 " Command-mode abbreviation to replace the :edit Vim command.
 cnoreabbrev e Edit
+
+
+filetype plugin on
+
+
+
