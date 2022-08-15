@@ -147,7 +147,8 @@ alias df="/bin/duf"
 alias du="/bin/dust"
 alias curl="/bin/http"
 alias br="/bin/broot"
-alias cd="__zoxide_z"
+#alias cd=z
+alias cd="__zoxide_z "$@" "
 export LANGUAGE=en_US.UTF-8
 
 

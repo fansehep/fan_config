@@ -18,11 +18,19 @@ set $term alacritty -e tmux
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu rofi -show run -theme solarized -show-icons
+set $menu rofi -show run -icon-theme "Papirus" -show-icons
+# run -theme solarized -show-icons
+# set $menu rofi -show run -theme solarized -show-icons
+
+
+
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+# 不要使用 output作为壁纸输出
 output * bg ~/Wallpaper/black_light.png fill
+
 
 font pango:SourceCodePro Mudium 11
 #
@@ -69,7 +77,7 @@ for_window [app_id="nautilus"] border none
 
 bindsym XF86AudioRaiseVolume        exec pactl set-sink-volume @DEFAULT_SINK@ +1% && pamixer --get-volume > $XDG_RUNTIME_DIR/wobpipe
 bindsym XF86AudioLowerVolume        exec pactl set-sink-volume @DEFAULT_SINK@ -1% && pamixer --get-volume > $XDG_RUNTIME_DIR/wobpipe
-bindsym $mod+Shift+m exec swaylock -f -i '~/Wallpaper/yello_night.png' -u
+bindsym $mod+Shift+m exec swaylock -f -i '~/Wallpaper/mountine_water.png' -u
 ### Key bindings
 #
 # Basics:
@@ -220,13 +228,17 @@ bar {
 }
 
 #
-default_border pixel
-default_floating_border pixel
+default_border pixel 1
+default_floating_border pixel 1
+# 边框颜色
 
+# exec swaybg -o \"*\" -c "F000000" -i ~/Wallpaper/black_light.png -m fill
+# exec swaybg -o \*  -i ~/Wallpaper/black_light.png -m fill
 
 # the message to me
 exec mako
 # sometimes i need to use chinese
+exec --no-startup-id fcitx5 -d
 exec_always fcitx5 -d --replace
 exec fcitx5
 # temparature protuct eyes
@@ -243,5 +255,7 @@ bindsym XF86MonBrightnessDown exec light -U 5
 #bindsym XF86AudioLowerVolume        exec pactl set-sink-volume @DEFAULT_SINK@ -5% && pamixer --get-volume > $XDG_RUNTIME_DIR/wobpipe
 bindsym Shift+XF86AudioRaiseVolume  exec pactl set-sink-volume @DEFAULT_SINK@ +1% && pamixer --get-volume > $XDG_RUNTIME_DIR/wobpipe
 bindsym Shift+XF86AudioLowerVolume  exec pactl set-sink-volume @DEFAULT_SINK@ -1% && pamixer --get-volume > $XDG_RUNTIME_DIR/wobpipe
+# 截图
 bindsym print exec grim -t jpeg -g "$(slurp)" ~/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+

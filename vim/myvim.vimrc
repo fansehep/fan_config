@@ -1,5 +1,8 @@
+
+" 不换行
+:set nowrap
 syntax on
-set nocompatible
+" set nocompatible
 syntax enable
 
 "
@@ -28,6 +31,7 @@ set ignorecase
 
 set noswapfile
 
+set autowriteall
 set showmode
 
 set mouse=a
