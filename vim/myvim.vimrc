@@ -2,7 +2,7 @@
 " 不换行
 :set nowrap
 syntax on
-" set nocompatible
+set nocompatible
 syntax enable
 
 "
@@ -92,6 +92,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " 好用的插件！必须安装 node.js 
 " sudo apm -g install instant-markdown-d
 Plug 'suan/vim-instant-markdown'
+Plug 'cjuniet/clang-format.vim'
 
 call plug#end()
 
@@ -270,6 +271,11 @@ cnoreabbrev e Edit
 
 
 filetype plugin on
+
+let g:ycm_enable_semantic_highlighting=1
+
+set clipboard=unnamedplus
+set paste
 
 
 
