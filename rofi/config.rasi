@@ -1,1 +1,18 @@
-/home/fan/.config/rofi/config.rasi
+
+configuration {
+    modes: [combi];
+    modi: "drun,run,filebrowser,emoji,ssh,combi";
+    font: "Source Code pro 11";
+    width: 11;
+    display-ssh:    "";
+    display-emoji:    "";
+    display-filebrowser:    "";
+    display-run:    "";
+    display-drun:   "";
+    drun-display-format: "{icon} {name}";
+    display-window: "";
+    display-combi:  "";
+    show-icons: true;
+    icon-theme: "Tela circle purple dark";
+}
+@theme "~/.config/rofi/nord.rasi"

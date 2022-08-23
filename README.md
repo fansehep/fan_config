@@ -105,3 +105,10 @@
   7. terminator
 
      - i use alacritty to my default terminator.
+
+|                  | OLD_VERSION    | NEW_VERSION    |
+| ---------------- | -------------- | -------------- |
+| Most Memory Cost | 301.3125 MB    | 225.1679 MB    |
+| Speed            | 26582789276 ns | 26281503362 ns |
+
+![]()
