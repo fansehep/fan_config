@@ -1,0 +1,1 @@
+/home/fan/.config/swaylock/swaylock.sh
