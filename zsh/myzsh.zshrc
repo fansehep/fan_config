@@ -76,8 +76,13 @@ ZSH_THEME="ys"
 
 
 
-plugins=(git colored-man-pages command-not-found copyfile 
-  cp web-search extract )
+plugins=(git colored-man-pages
+  command-not-found
+  copyfile 
+  cp
+  web-search
+  extract
+  copypath)
   source $HOME/antigen.zsh
   antigen use oh-my-zsh
   antigen bundle zsh-users/zsh-syntax-highlighting
@@ -139,26 +144,46 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 eval "$(zoxide init zsh)"
+# 彩色的ls
 alias ls="/bin/exa"
+# 彩色的 cat 适用于manpage
 alias cat="/bin/bat"
+# 比较全面的 top
 alias top="/bin/btm"
+# 彩色 ps
 alias ps="/bin/procs"
 alias df="/bin/duf"
-alias du="/bin/dust"
+alias tree="/bin/dust"
 alias curl="/bin/http"
+# 快速展开目录
 alias br="/bin/broot"
-#alias cd=z
-alias cd="__zoxide_z "$@" "
+# 快速clear
+alias c="/bin/clear"
+# 我懒
+alias ..1="cd .."
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias ..4="cd ../../../.."
+alias ..5="cd ../../../../.."
+
+
+
 export LANGUAGE=en_US.UTF-8
 
-
+export XDG_CURRENT_DESKTOP=sway
 export INPUT_METHOD=fcitx
 export QT_IM_MODULE=fcitx
 export GTK_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export XIM_SERVERS=fcitx
-WAYLAND_DISPLAY=alacritty
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+
+# anaconda 环境变量
+export PATH="/home/fan/anaconda3/bin:$PATH"
 
 # i don't like the tmux bar
 # exec tmux set-option status off
+# crontab 定时任务默认编辑器
+export EDITOR=vim
+# swaysock
+export SWAYSOCK="/run/user/1000/sway-ipc.1000.818.sock"

@@ -39,8 +39,8 @@
 
 /* The whole bar */
 #waybar {
-    background: @bg;
-    color: @light;
+    background: transparent;
+    color: #ffffff;
     font-family: "Monaco";
     font-size: 12.5px;
     font-weight: bold;
