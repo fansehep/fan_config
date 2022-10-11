@@ -1,90 +1,137 @@
 {
-  "explorer.confirmDelete": false,
-  "editor.mouseWheelZoom": true,
-  "go.useCodeSnippetsOnFunctionSuggest": true,
-  "[git-commit]": {
-      "editor.rulers": [
-          72
-      ],
-      "workbench.editor.restoreViewState": false
-  },
-  "workbench.editor.enablePreview": false,
-  "grunt.autoDetect": "on",
-  "workbench.colorCustomizations": {},
-  "debug.onTaskErrors": "debugAnyway",
-  "testMate.cpp.log.userId": "dddfccb3bf8ac7124b7987d1c4612f93fcb7dc92",
-  "view-in-browser.customBrowser": "chrome",
-  "C_Cpp.updateChannel": "Insiders",
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.iconTheme": "material-icon-theme",
-  "files.autoSave": "afterDelay",
-  "tabnine.experimentalAutoImports": true,
-  "git.confirmSync": false,
-  "cmake.configureOnOpen": true,
-  "editor.tabSize": 2,
-  "[cpp]": {
-  
-      "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
-  },
-  "terminal.integrated.defaultProfile.linux": "fish",
-  "editor.minimap.enabled": false,
-  "editor.minimap.renderCharacters": false,
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "editor.quickSuggestionsDelay": 0,
-  "git.ignoreRebaseWarning": true,
-  "window.titleBarStyle": "toggle",
-  "better-comments.highlightPlainText": true,
-  "vim.easymotionDimColor": "#008000",
-  "vim.easymotionIncSearchForegroundColor": "#008000",
-  "vim.easymotionMarkerForegroundColorOneChar": "#008000",
-  "vim.easymotion": true,
-  "vim.leader": ",",
-  "vim.useCtrlKeys": true,
-   "vim.useSystemClipboard": true,
-   
-  "sync.gist": "Access Token",
-  "C_Cpp.default.cppStandard": "c++17",
-  "C_Cpp.loggingLevel": "Debug",
-  "C_Cpp.errorSquiggles": "Enabled",
-  "explorer.confirmDragAndDrop": false,
-  "bracket-pair-colorizer-2.depreciation-notice": false,
-  "C_Cpp_Runner.cStandard": "gnu17",
-  "C_Cpp_Runner.cppStandard": "c++17",
-  "workbench.editor.untitled.hint": "hidden",
-  "security.workspace.trust.untrustedFiles": "open",
-  "editor.cursorStyle": "block",
-  //"workbench.colorTheme": "Visual Studio Dark",
-  "workbench.colorCustomizations": {
-      // 设置光标颜色
-      "editorCursor.foreground": "#6be2e2",
-  },
-  "editor.fontFamily": "Source Code Pro medium, monospace",
-  "editor.fontLigatures": true,
-  "workbench.colorTheme": "One Dark Pro Darker",
-  "workbench.editorAssociations": {
-      "*.doc": "default"
-  },
-  "kite.showWelcomeNotificationOnStartup": false,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "C_Cpp.intelliSenseEngine": "Default",
-  "rust-analyzer.cargo.buildScripts.overrideCommand": null,
-  "go.toolsManagement.autoUpdate": true,
-  "editor.fontSize": 13,
-  "clangd.checkUpdates": true,
-  "clangd.arguments": [
-      "-j=4",
-      "--background-index",
-      "--all-scopes-completion",
-      "--pch-storage=disk",
-      "--completion-style=detailed",
-      "--header-insertion=iwyu",
-      "--malloc-trim",
-      "--query-driver=/usr/bin/clang++-11"
-  ],
-  "[bazel]": {
-      "editor.defaultFormatter": "StackBuild.bazel-stack-vscode"
-  },
-  "editor.suggest.showStatusBar": true
-  
+    "explorer.confirmDelete": false,
+    "editor.mouseWheelZoom": true,
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "[git-commit]": {
+        "editor.rulers": [
+            72
+        ],
+        "workbench.editor.restoreViewState": false
+    },
+    "workbench.editor.enablePreview": false,
+    "grunt.autoDetect": "on",
+    "debug.onTaskErrors": "debugAnyway",
+    "testMate.cpp.log.userId": "dddfccb3bf8ac7124b7987d1c4612f93fcb7dc92",
+    "view-in-browser.customBrowser": "chrome",
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.iconTheme": "material-icon-theme",
+    "files.autoSave": "afterDelay",
+    "tabnine.experimentalAutoImports": true,
+    "git.confirmSync": false,
+    "cmake.configureOnOpen": true,
+    "editor.tabSize": 2,
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "editor.minimap.enabled": false,
+    "editor.minimap.renderCharacters": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.quickSuggestionsDelay": 0,
+    "git.ignoreRebaseWarning": true,
+    "window.titleBarStyle": "custom",
+    "better-comments.highlightPlainText": true,
+    "vim.easymotionDimColor": "#008000",
+    "vim.easymotionIncSearchForegroundColor": "#008000",
+    "vim.easymotionMarkerForegroundColorOneChar": "#008000",
+    "vim.easymotion": true,
+    "vim.leader": ",",
+    "vim.useCtrlKeys": true,
+    "vim.useSystemClipboard": true,
+    "sync.gist": "Access Token",
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.loggingLevel": "Debug",
+    "C_Cpp.errorSquiggles": "Enabled",
+    "explorer.confirmDragAndDrop": false,
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "C_Cpp_Runner.cStandard": "gnu20",
+    "C_Cpp_Runner.cppStandard": "c++20",
+    "workbench.editor.untitled.hint": "hidden",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.cursorStyle": "block",
+    //"workbench.colorTheme": "Visual Studio Dark",
+    "workbench.colorCustomizations": {
+        // 设置光标颜色
+        "editorCursor.foreground": "#6be2e2",
+    },
+    "editor.fontFamily": "Source Code Pro medium, monospace",
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "workbench.editorAssociations": {
+        "*.doc": "default"
+    },
+    "kite.showWelcomeNotificationOnStartup": false,
+    "C_Cpp.intelliSenseEngine": "Default",
+    "rust-analyzer.cargo.buildScripts.overrideCommand": null,
+    "go.toolsManagement.autoUpdate": true,
+    "editor.fontSize": 13,
+    "clangd.checkUpdates": true,
+    "clangd.arguments": [
+        "-j=4",
+        "--background-index",
+        "--all-scopes-completion",
+        "--pch-storage=disk",
+        "--completion-style=detailed",
+        "--header-insertion=iwyu",
+        "--malloc-trim",
+        "--query-driver=/usr/bin/clang++-11"
+    ],
+    "editor.suggest.showStatusBar": true,
+    "verilog.linting.linter": "verilator",
+    "c-cpp-compile-run.c-compiler": "/usr/bin/clang",
+    "c-cpp-compile-run.cpp-compiler": "/usr/bin/clang",
+    // my code comment color setting
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "*",
+            "color": "#98C379",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+    ],
+    // 
+    "editor.tokenColorCustomizations": {
+        "comments": "#98C379" // pick any color
+    },
 }
