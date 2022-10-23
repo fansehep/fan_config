@@ -76,7 +76,7 @@
         "--completion-style=detailed",
         "--header-insertion=iwyu",
         "--malloc-trim",
-        "--query-driver=/usr/bin/clang++-11"
+        "--query-driver=/usr/bin/clang++-20"
     ],
     "editor.suggest.showStatusBar": true,
     "verilog.linting.linter": "verilator",
@@ -134,4 +134,5 @@
     "editor.tokenColorCustomizations": {
         "comments": "#98C379" // pick any color
     },
+    "window.zoomLevel": 1,
 }
