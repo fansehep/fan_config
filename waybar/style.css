@@ -58,6 +58,7 @@
 #temperature,
 #custom-alsa,
 #tray,
+#bluetooth,
 #backlight {
     padding-left: 10px;
     padding-right: 10px;
@@ -142,53 +143,75 @@
 }
 
 #custom-alsa {
+    color: #ffffff;
 	background: @sound;
 }
 
 #network {
+    color: #ffffff;
     background: @network;
 }
 
 #memory {
+    color: #ffffff;
     background: @memory;
 }
 
 #cpu {
+    color: #ffffff;
     background: @cpu;
 }
 
 #temperature {
+    color: #ffffff;
     background: @temp;
 }
 
 #custom-layout {
+    color: #ffffff;
     background: @layout;
 }
 
 #battery {
+    color: #ffffff;
     background: #34435f;
 }
 
 #backlight {
+    color: #ffffff;
 	background: @backlight;
 }
 
 #clock.date {
+    color: #ffffff;
     background: @date;
 }
 
 #clock.time {
+    color: #ffffff;
     background: @time;
 }
 
+#clock {
+    color: #ffffff;
+}
+
 #pulseaudio { /* Unsused but kept for those who needs it */
+    color: #ffffff;
     background: @sound;
 }
 
 #pulseaudio.muted {
+    color: #ffffff;
     /* No styles */
 }
 
 #tray {
+    color: #ffffff;
 	background: @tray;
+}
+
+#bluetooth {
+    color: #ffffff;
+    background: @backlight;
 }

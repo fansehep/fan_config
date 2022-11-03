@@ -134,6 +134,5 @@
     "editor.tokenColorCustomizations": {
         "comments": "#98C379" // pick any color
     },
-    "window.zoomLevel": 1,
     "clangd.path": "/home/fan/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/15.0.3/clangd_15.0.3/bin/clangd",
 }
