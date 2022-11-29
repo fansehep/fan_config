@@ -145,7 +145,7 @@ source $ZSH/oh-my-zsh.sh
 #
 eval "$(zoxide init zsh)"
 # 彩色的ls
-alias ls="/bin/exa"
+alias ls="/bin/exa --icons"
 # 彩色的 cat 适用于manpage
 alias cat="/bin/bat"
 # 比较全面的 top
@@ -166,9 +166,8 @@ alias ..3="cd ../../.."
 alias ..4="cd ../../../.."
 alias ..5="cd ../../../../.."
 
-
-
 export LANGUAGE=en_US.UTF-8
+
 
 export XDG_CURRENT_DESKTOP=sway
 export INPUT_METHOD=fcitx

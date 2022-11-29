@@ -20,8 +20,8 @@
 @define-color sound #46536A;
 @define-color network #5D7096;
 @define-color memory #546484;
-@define-color cpu #4a5978;
-@define-color temp #404c63;
+@define-color cpu #596A8D;
+@define-color temp #4D5C78;
 @define-color layout #5e81ac;
 @define-color battery #88c0d0;
 @define-color date #2e3440;
@@ -39,11 +39,12 @@
 
 /* The whole bar */
 #waybar {
-    background: transparent;
-    color: #ffffff;
-    font-family: "Monaco";
-    font-size: 12.5px;
+    color: #fff;
+    background-color: @date;
+    font-family: JetBrains Mono Nerd Font;
+    font-size: 13px;
     font-weight: bold;
+    opacity: 0.6;
 }
 
 /* Each module */
@@ -58,7 +59,6 @@
 #temperature,
 #custom-alsa,
 #tray,
-#bluetooth,
 #backlight {
     padding-left: 10px;
     padding-right: 10px;
@@ -125,7 +125,6 @@
 	padding-left: 5px;
 	padding-right: 5px;
 	color: @light;
-	background: @workspaces;
 }
 
 #workspaces button.focused {
@@ -143,75 +142,53 @@
 }
 
 #custom-alsa {
-    color: #ffffff;
 	background: @sound;
 }
 
 #network {
-    color: #ffffff;
-    background: @network;
+    background: transparent;
 }
 
 #memory {
-    color: #ffffff;
-    background: @memory;
+    background: transparent;
 }
 
 #cpu {
-    color: #ffffff;
-    background: @cpu;
+    background: transparent;
 }
 
 #temperature {
-    color: #ffffff;
-    background: @temp;
+    background: transparent;
 }
 
 #custom-layout {
-    color: #ffffff;
-    background: @layout;
+    background: transparent;
 }
 
 #battery {
-    color: #ffffff;
-    background: #34435f;
+    background: transparent;
 }
 
 #backlight {
-    color: #ffffff;
-	background: @backlight;
+	background: transparent;
 }
 
 #clock.date {
-    color: #ffffff;
     background: @date;
 }
 
 #clock.time {
-    color: #ffffff;
     background: @time;
 }
 
-#clock {
-    color: #ffffff;
-}
-
 #pulseaudio { /* Unsused but kept for those who needs it */
-    color: #ffffff;
-    background: @sound;
+    background: transparent;
 }
 
 #pulseaudio.muted {
-    color: #ffffff;
     /* No styles */
 }
 
 #tray {
-    color: #ffffff;
-	background: @tray;
-}
-
-#bluetooth {
-    color: #ffffff;
-    background: @backlight;
+	background: transparent;
 }

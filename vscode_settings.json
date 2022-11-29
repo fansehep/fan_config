@@ -69,14 +69,14 @@
     "editor.fontSize": 13,
     "clangd.checkUpdates": true,
     "clangd.arguments": [
-        "-j=1",
+        "-j=10",
         "--background-index",
         "--all-scopes-completion",
         "--pch-storage=disk",
         "--completion-style=detailed",
         "--header-insertion=iwyu",
         "--malloc-trim",
-        "--query-driver=/usr/bin/clang++-20"
+        "--query-driver=/usr/bin/clang++-11"
     ],
     "editor.suggest.showStatusBar": true,
     "verilog.linting.linter": "verilator",
@@ -135,4 +135,5 @@
         "comments": "#98C379" // pick any color
     },
     "clangd.path": "/home/fan/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/15.0.3/clangd_15.0.3/bin/clangd",
+    "python.jediEnabled": false,
 }
